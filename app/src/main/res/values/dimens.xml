@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nav_header_container">560px</dimen>
+    <dimen name="_10">10px</dimen>
+    <dimen name="_20">20px</dimen>
+    <dimen name="_30">30px</dimen>
+    <dimen name="_40">40px</dimen>
+    <dimen name="_50">50px</dimen>
+    <dimen name="_60">60px</dimen>
+    <dimen name="_70">70px</dimen>
+    <dimen name="_80">80px</dimen>
+    <dimen name="_90">90px</dimen>
+    <dimen name="_100">100px</dimen>
+    <dimen name="_110">110px</dimen>
+    <dimen name="_120">120px</dimen>
+    <dimen name="_130">130px</dimen>
+    <dimen name="_140">140px</dimen>
+    <dimen name="_150">150px</dimen>
+    <dimen name="_160">160px</dimen>
+    <dimen name="_170">170px</dimen>
+    <dimen name="_180">180px</dimen>
+    <dimen name="_190">190px</dimen>
+    <dimen name="_200">200px</dimen>
+    <dimen name="_210">210px</dimen>
+    <dimen name="_220">220px</dimen>
+    <dimen name="_230">230px</dimen>
+    <dimen name="_240">240px</dimen>
+    <dimen name="_250">250px</dimen>
+    <dimen name="_260">260px</dimen>
+    <dimen name="_270">270px</dimen>
+    <dimen name="_280">280px</dimen>
+    <dimen name="_290">290px</dimen>
+    <dimen name="_300">300px</dimen>
+    <dimen name="_310">310px</dimen>
+    <dimen name="_320">320px</dimen>
+    <dimen name="_330">330px</dimen>
+    <dimen name="_340">340px</dimen>
+    <dimen name="_350">350px</dimen>
+
+    <dimen name="_5sp">5sp</dimen>
+    <dimen name="_10sp">10sp</dimen>
+    <dimen name="_15sp">15sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
+    <dimen name="_25sp">25sp</dimen>
+    <dimen name="_40sp">40sp</dimen>
+    <dimen name="_45sp">45sp</dimen>
+    <dimen name="_50sp">50sp</dimen>
+
+</resources>

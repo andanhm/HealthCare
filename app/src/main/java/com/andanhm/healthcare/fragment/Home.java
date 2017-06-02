@@ -1,5 +1,7 @@
 package com.andanhm.healthcare.fragment;
 
+import android.app.Activity;
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -12,7 +14,12 @@ import com.andanhm.healthcare.R;
  * Created by andan on 02/06/17.
  */
 
-public class DoctorFragment extends Fragment {
+public class Home extends Fragment {
+
+    public Home() {
+        // Required empty public constructor
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +29,7 @@ public class DoctorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_doctor, container, false);
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 
     @Override

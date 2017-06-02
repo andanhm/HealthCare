@@ -8,14 +8,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/HealthCareTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/HealthCareTheme"
+        android:fullBackupContent="true">
+        <activity
+            android:name=".activity.Splash"
+            android:label="@string/title_activity_splash"
+            android:theme="@style/HealthCareTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.Main"
+            android:label="@string/title_home"
+            android:theme="@style/HealthCareTheme" />
+        <activity
+            android:name=".activity.AboutUs"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/HealthCareTheme" />
     </application>
 
 </manifest>

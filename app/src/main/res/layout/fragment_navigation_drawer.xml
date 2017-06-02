@@ -1,33 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/white">
 
-
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:id="@+id/nav_header_container"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary">
-
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="start"
+            android:layout_margin="@dimen/_10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_action_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_30"
+                    android:layout_marginStart="@dimen/_30"
+                    android:contentDescription="@string/drawer_close" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/ic_action_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_30"
+                    android:layout_marginEnd="@dimen/_30"
+                    android:contentDescription="@string/drawer_close" />
+            </LinearLayout>
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_240"
+            android:layout_height="@dimen/_240"
             android:src="@drawable/ic_profile"
-            android:scaleType="fitCenter"
-            android:layout_centerInParent="true" />
-
-    </RelativeLayout>
-
-
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/colorAccent"/>
+        <TextView
+            android:layout_margin="@dimen/_20"
+            android:fontFamily="cursive"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/_25sp"
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/drawerList"
+        android:id="@+id/recyclerViewDrawerList"
+        android:layout_margin="@dimen/_10"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/nav_header_container"
-        android:layout_marginTop="15dp" />
+        android:layout_height="wrap_content"/>
+</LinearLayout>
 
-
-</RelativeLayout>

@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.andanhm.healthcare.R;
@@ -14,45 +15,48 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by andan on 02/06/17.
+ *
  */
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MenuViewHolder> {
-    List<NavigationDrawerItem> data = Collections.emptyList();
+    private List<NavigationDrawerItem> mNavigationDrawerItem = Collections.emptyList();
     private LayoutInflater inflater;
     private Context mContext;
-    public NavigationDrawerAdapter(Context mContext,List<NavigationDrawerItem> data){
+
+    public NavigationDrawerAdapter(Context mContext, List<NavigationDrawerItem> mNavigationDrawerItem) {
         this.mContext = mContext;
         inflater = LayoutInflater.from(mContext);
-        this.data = data;
+        this.mNavigationDrawerItem = mNavigationDrawerItem;
     }
+
     @Override
     public NavigationDrawerAdapter.MenuViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.nav_drawer_row, parent, false);
-        MenuViewHolder holder = new MenuViewHolder(view);
-        return holder;
+        return new MenuViewHolder(inflater.inflate(R.layout.nav_drawer_row, parent, false));
     }
-    public void delete(int position) {
-        data.remove(position);
-        notifyItemRemoved(position);
-    }
+
     @Override
     public void onBindViewHolder(NavigationDrawerAdapter.MenuViewHolder holder, int position) {
-        NavigationDrawerItem current = data.get(position);
-        holder.title.setText(current.getTitle());
+        NavigationDrawerItem current = mNavigationDrawerItem.get(position);
+        if (current.getTitle().equals(mContext.getString(R.string.nav_item_notifications))){
+            holder.notificationLayout.setVisibility(View.VISIBLE);
+        }
+        holder.txtTitle.setText(current.getTitle());
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return mNavigationDrawerItem.size();
     }
 
     class MenuViewHolder extends RecyclerView.ViewHolder {
-        TextView title;
+        TextView txtTitle, txtNoOfNotificationReceived;
+        LinearLayout notificationLayout;
 
-        public MenuViewHolder(View itemView) {
+        MenuViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title);
+            txtTitle = (TextView) itemView.findViewById(R.id.title);
+            txtNoOfNotificationReceived = (TextView) itemView.findViewById(R.id.txtNoOfNotificationReceived);
+            notificationLayout = (LinearLayout) itemView.findViewById(R.id.layoutNotification);
 
         }
     }

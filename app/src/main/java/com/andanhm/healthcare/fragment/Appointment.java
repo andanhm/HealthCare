@@ -12,7 +12,7 @@ import com.andanhm.healthcare.R;
  * Created by andan on 02/06/17.
  */
 
-public class AppointmentFragment extends Fragment {
+public class Appointment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

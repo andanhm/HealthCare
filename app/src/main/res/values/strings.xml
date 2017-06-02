@@ -6,18 +6,22 @@
     <string name="drawer_close">Close</string>
     <string name="text_appointment">Appointment</string>
     <string name="text_doctors">Doctors</string>
+    <string name="text_about_us">About Us</string>
     <string name="text_notification">Notification</string>
     <string name="nav_item_home">Home</string>
     <string name="nav_item_appointment">Appointment</string>
     <string name="nav_item_doctor">Doctor</string>
-    <string name="nav_item_notifications">Messages</string>
-    <string name="search_action_select">Search action is selected!</string>
+    <string name="nav_item_notifications">Notification</string>
+    <string name="nav_item_about_us">About Us</string>
+    <string name="action_select">Setting action is selected!</string>
+    <string name="splash_screen_text">For a better life!!!!!</string>
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>@string/nav_item_home</item>
         <item>@string/nav_item_appointment</item>
         <item>@string/nav_item_doctor</item>
         <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_about_us</item>
     </string-array>
 
     <string name="title_messages">Messages</string>
@@ -33,10 +37,13 @@
     <string name="err_msg_password">Enter the password</string>
 
     <string name="btn_appointment">Make An appointment</string>
-    
+
     <string name="meet_out_physicians">Meet our physicians</string>
     <string name="dr_name">Dr. </string>
     <string name="dr_department">Pediatrist</string>
     <string name="dr_about_us">Aenean pulvinar diam vel felis volutpat dictum. Aenean ac tellus suscipit sapien scelerisque tempus non mollis massa.</string>
     <string name="btn_dr">Read more</string>
+    <string name="title_activity_about_us">AboutUs</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="_1">1</string>
 </resources>
